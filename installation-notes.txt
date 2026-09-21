@@ -42,3 +42,30 @@ Setting up the database (one time only)
 
 The demo version should be pointed at a test database, not one
 holding real records.
+
+
+If Windows warned you about this installer
+------------------------------------------
+
+Your browser or Windows may warn you when you download or run this
+installer -- for example "isn't commonly downloaded", or "Windows
+protected your PC" with "Unknown publisher". This is because the
+program is new and its installer is not yet digitally signed, so
+Windows has not built up a reputation for it. It does not mean
+anything is wrong with the file. The installer is published by
+AWM Limited.
+
+  - In your browser: open the download's menu and choose Keep, then
+    Show more, then Keep anyway.
+  - When running it: on the "Windows protected your PC" screen,
+    click More info, then Run anyway.
+
+To be sure the file is genuine:
+
+  - Only download it from the official page:
+    https://github.com/WillAWMghub/AWMTKS-releases
+  - Right-click the file, choose Properties, then the Details tab.
+    The company should read "AWM Limited".
+
+If your antivirus software removes the file instead, restore it from
+quarantine and allow it, or contact whoever supplied the program.
