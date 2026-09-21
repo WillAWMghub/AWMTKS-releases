@@ -1,0 +1,57 @@
+Licensing your copy of Weighbridge
+==================================
+
+Weighbridge needs a licence for each PC it runs on. Until a licence is
+installed, the program shows only an activation screen and nothing else
+will open.
+
+
+Getting and installing your licence
+-----------------------------------
+
+1. Start Weighbridge. The first time, it shows "This copy isn't
+   licensed" together with a long code called the MACHINE ID.
+
+2. Send that machine ID to whoever supplies your licence. There is a
+   "Copy machine ID" button on the screen to make this easy.
+
+3. They will send you back a licence file (it ends in .lic).
+
+4. On the same screen, choose "Select licence file..." and pick that
+   file. The program checks it and, if it is valid for this PC, starts
+   up straight away.
+
+You can also see and change your licence later, from the admin menu:
+Settings > Licensing. That page shows the machine ID, who the licence
+is for, when it expires (if it does) and which features it includes,
+and lets you install a new licence file.
+
+
+Good to know
+------------
+
+- A licence is issued for ONE PC. It will not work on another PC, and
+  copying the licence file elsewhere will not help. If you replace the
+  PC or change major parts of it, send the new machine ID to your
+  supplier and you will be sent a new licence.
+
+- The basic licence covers normal weighing. Some features are optional
+  extras and are only switched on if your licence includes them:
+    - ANPR (automatic number plate recognition)
+    - Smart card / RFID identification
+    - QR reg-only kiosk terminal mode
+    - Scheduled report emails
+    - Defra digital waste tracking
+  A feature that is not in your licence is shown greyed out with a
+  padlock. To add one, ask your supplier for an updated licence file
+  and install it under Settings > Licensing.
+
+- Some licences have an end date. When one runs out, the program asks
+  for a new licence file in the same way.
+
+- Your licence file is kept when Weighbridge is updated or
+  re-installed, so you do not need to install it again. It is stored
+  inside the program folder (in the _internal folder, as license.key).
+  Keep a copy somewhere safe.
+
+- The Weighbridge Demo version does not need a licence.
