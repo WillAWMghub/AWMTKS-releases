@@ -2,24 +2,24 @@ Licensing your copy of Weighbridge
 ==================================
 
 Weighbridge needs a licence for each PC it runs on. Until a licence is
-installed, the program shows only an activation screen and nothing else
-will open.
+installed, the program opens only a small licence window and nothing
+else will open. Closing that window closes the program.
 
 
 Getting and installing your licence
 -----------------------------------
 
-1. Start Weighbridge. The first time, it shows "This copy isn't
-   licensed" together with a long code called the MACHINE ID.
+1. Start Weighbridge. The first time, it opens a small window saying
+   "This copy isn't licensed", with a long code called the MACHINE ID.
 
-2. Send that machine ID to whoever supplies your licence. There is a
-   "Copy machine ID" button on the screen to make this easy.
+2. Contact AWM Ltd and send them that machine ID. There is a
+   "Copy machine ID" button in the window to make this easy.
 
 3. They will send you back a licence file (it ends in .lic).
 
-4. On the same screen, choose "Select licence file..." and pick that
-   file. The program checks it and, if it is valid for this PC, starts
-   up straight away.
+4. In the same window, choose "Select licence file..." and pick that
+   file. The program checks it and, if it is valid for this PC, the
+   window closes and the program starts up straight away.
 
 You can also see and change your licence later, from the admin menu:
 Settings > Licensing. That page shows the machine ID, who the licence
@@ -41,13 +41,17 @@ Good to know
     - Smart card / RFID identification
     - QR reg-only kiosk terminal mode
     - Scheduled report emails
+    - Automatic ticket emails to customers
+    - Two weighbridges on one PC (operator console)
+    - Multi-tip visits (several drop-offs or collections per visit)
     - Defra digital waste tracking
   A feature that is not in your licence is shown greyed out with a
   padlock. To add one, ask your supplier for an updated licence file
   and install it under Settings > Licensing.
 
-- Some licences have an end date. When one runs out, the program asks
-  for a new licence file in the same way.
+- Some licences have an end date. Once one runs out, the program opens
+  only the licence window again, asking for a new licence file in the
+  same way.
 
 - Your licence file is kept when Weighbridge is updated or
   re-installed, so you do not need to install it again. It is stored
