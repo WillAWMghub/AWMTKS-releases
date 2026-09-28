@@ -1,23 +1,25 @@
 Before you install: Weighbridge needs a MySQL server
 =====================================================
 
-Weighbridge keeps its tickets, vehicles, users and settings in a
+Weighbridge keeps its transactions, vehicles, users and settings in a
 MySQL database. This installer does NOT install MySQL, and the
 program cannot run without one.
 
 You will need:
 
-  - A MySQL server that this PC can reach. It can be installed on
-    this PC, or on another computer on your network.
-  - A database for Weighbridge, and a MySQL user that has full
-    access to it.
+  - A MySQL server (MySQL 8.0 or newer) that this PC can reach. It can
+    be on this PC, or on another computer on your network. Several
+    weighing PCs can share one database.
+  - The Weighbridge database on that server, and a MySQL user for the
+    program to sign in with.
 
 
 Setting up the database (one time only)
 ---------------------------------------
 
-1. If you don't already have a MySQL server, install one from
-   https://dev.mysql.com/downloads/mysql/
+1. If you don't already have a MySQL server, install MySQL Community
+   Server (free) from https://dev.mysql.com/downloads/mysql/ and make
+   a note of the root password you choose during its setup.
 
 2. Create the Weighbridge database by running the schema file that
    is installed with the program. With the default install folder
@@ -25,23 +27,59 @@ Setting up the database (one time only)
 
        C:\Weighbridge\_internal\sql\schema.sql
 
-   (C:\WeighbridgeDemo\_internal\sql\schema.sql for the demo.)
-   For example, from a command prompt:
+   (C:\WeighbridgeDemo\_internal\sql\schema.sql for the demo. The same
+   file is attached to every release on the downloads page, as
+   weighbridge-schema.sql.)
+
+   On the PC where MySQL is installed, from a command prompt:
 
        mysql -u root -p < "C:\Weighbridge\_internal\sql\schema.sql"
 
+   If "mysql" isn't recognised, use its full path instead, for example
+   "C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe" -- or open
+   the file in MySQL Workbench and run it there.
+
    This creates a database called weighbridge_db.
 
-3. Start Weighbridge. A licence is needed before anything else opens
-   (see the licensing guide shown at the end of setup; the demo
-   version does not need one). Once licensed, if the program cannot
-   connect to the database it shows a box asking for the server
-   address, port (normally 3306), database name, username and
-   password. Enter them there. You can change them later under
-   Settings > Database.
+3. Create a MySQL user for the program, with full access to that
+   database only. In MySQL Workbench, or the mysql command line
+   (mysql -u root -p), run:
+
+       CREATE USER 'weighbridge'@'%' IDENTIFIED BY 'choose-a-password';
+       GRANT ALL PRIVILEGES ON weighbridge_db.* TO 'weighbridge'@'%';
+
+   '%' lets it connect from any PC on your network. If the database is
+   on this same PC, you can use 'localhost' in place of '%'.
+
+4. If the database is on a different computer, make sure this PC can
+   reach it: on the MySQL server, allow incoming connections on TCP
+   port 3306 in Windows Firewall. (MySQL's own installer offers to do
+   this for you.)
+
+5. Start Weighbridge. The first time, it asks for a licence -- see the
+   licensing guide shown at the end of setup (the demo version doesn't
+   need one). Then, if it can't reach the database yet, it asks for
+   the connection details: the server's address (localhost if it's on
+   this PC), the port (normally 3306), the database name
+   (weighbridge_db), and the username and password from step 3. You
+   can change these later under Settings > Database.
+
+6. Sign in as staff with the Staff button on the weighing screen:
+   username admin, password 1234. Change that password straight away,
+   under Users in the admin menu.
 
 The demo version should be pointed at a test database, not one
 holding real records.
+
+
+Updating to a newer version
+---------------------------
+
+Run the newer installer over the existing installation, or use
+"Check for updates" in the admin menu. Your settings, licence and
+data are kept, and the program brings the database up to date by
+itself the first time the new version starts -- there's no need to
+run the schema file again.
 
 
 If Windows warned you about this installer
