@@ -68,8 +68,8 @@ Setting up the database (one time only)
    username admin, password 1234. Change that password straight away,
    under Users in the admin menu.
 
-The demo version should be pointed at a test database, not one
-holding real records.
+The demo version doesn't need any of this: it has its own built-in
+database with a made-up site, and needs no MySQL server or licence.
 
 
 Updating to a newer version
