@@ -8,6 +8,9 @@ Windows and Linux.
 - This repository is for downloads only - the program's source code is not published here.
 - The program needs a licence for your PC to run. Installing it does not include one. The
   **demo** needs no licence.
+- Each release also lists **Source code (zip)** and **Source code (tar.gz)**. GitHub adds these
+  to every release automatically: they're only a copy of this page's own guides, not the
+  program. The program is in the installers and Linux packages listed above them.
 
 | You want | Windows | Linux |
 | --- | --- | --- |
